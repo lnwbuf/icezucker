@@ -7,15 +7,13 @@
     <title>ICE Zucker</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,6 +72,10 @@
       }
       .black-text{
         color: black;
+      }
+      .text-post-date{
+        color: #888;
+        font-size: 10px;
       }
       .blue-background{
         background-color: #3b5999;
@@ -198,7 +200,8 @@
       }
       .footer-box{
         background-color: #282828;
-        height: 200px;
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
       .font-quark-light{
         font-family: 'Quark-Light';
@@ -224,12 +227,21 @@
       .profile-pic{
         margin-bottom: 50px;
       }
+      .friend-pic{
+        margin-bottom: 15px;
+      }
       .profile{
         border-radius: 20px;
       }
       .margin-seeall{
         margin-bottom: 0px;
         margin-top: 10px;
+      }
+      .friend-text{
+        margin-top: 15px;
+        font-size: 17px;
+        margin-left: 0px;
+        padding-left: 0px;
       }
 
     </style>
@@ -254,13 +266,12 @@
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-              <div class="carousel-caption profile-pic paper-shadow"><img style="width:20%; height:auto"src="img/profile.png "/></div>
+              <div class="carousel-caption profile-pic paper-shadow"><img style="width:20%; height:auto"src="img/profile.jpg" class="img-circle"/></div>
               <div class="carousel-caption">
                   <h3 class="font-montserrat">Thanachote and Lalinda Profile</h3>
                 </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
               <div class="item active">
                 <img class="carousel-height" src="img/mountain.jpg">
 
@@ -289,7 +300,7 @@
 
         <div class="col-xs-2 margin-ontop">
           <ul class="nav nav-pills nav-stacked">
-            <li><img class="navheight logo-padding" href="#" src="img/facebook_logo.jpg"></img></li>
+            <li><img class="navheight logo-padding" href="#" src="img/logo.png" style="width:100%; height:auto;"></img></li>
             <li><a href="#">Home</a></li>
             <li class="active"><a href="#">Profile</a></li>
             <li><a href="#">Messages</a></li>
@@ -371,6 +382,15 @@
         </div> -->
       </div>
 
+
+
+
+
+
+
+
+
+
       <!-- RIGHT PART -->
       <div class="row col-xs-8 col-xs-push-1 no-padding margin-ontop">
         <div class="row">
@@ -393,55 +413,108 @@
 
           <!-- Nav tabs -->
           <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li class="active"><a href="#home" role="tab" data-toggle="tab">Friends : <span class="label label-default">768</span></a></li>
-            <li><a href="#profile" role="tab" data-toggle="tab">Photos</a></li>
-            <li><a href="#messages" role="tab" data-toggle="tab">Contact</a></li>
-            <li><a href="#settings" role="tab" data-toggle="tab">Favourite</a></li>
+            <li class="active"><a href="#friends" role="tab" data-toggle="tab">Friends : <span class="label label-default">768</span></a></li>
+            <li><a href="#photos" role="tab" data-toggle="tab">Photos : <span class="label label-default">4124</span></a></li>
+            <li><a href="#contact" role="tab" data-toggle="tab">Contact</a></li>
+            <li><a href="#favourite" role="tab" data-toggle="tab">Favourite</a></li>
           </ul>
 
           <!-- Tab panes -->
           <div class="tab-content">
-            <div class="tab-pane active fade" id="home">
+            <div class="tab-pane active fade in" id="friends">
               <div class="panel panel-default">
               
               <div class="panel-body font-quark-light pic-padding" style="padding-buttom=0px;">
-              <img style="width:24%; height:auto"src="img/new.jpg"/>
-              <img style="width:24%; height:auto"src="img/hung.jpg"/>
-              <img style="width:24%; height:auto"src="img/aum.jpg"/>
-              <img style="width:24%; height:auto"src="img/pim.jpg "/>
-              <a href="#" style="padding-top:10px; margin-bottom:0px;">See All Friends</a>
+                <h3>Top Friends</h3>
+                <!-- <img style="width:24%; height:auto"src="img/new.jpg"/>
+                <img style="width:24%; height:auto"src="img/hung.jpg"/>
+                <img style="width:24%; height:auto"src="img/aum.jpg"/>
+                <img style="width:24%; height:auto"src="img/pim.jpg "/> -->
+
+                <div class="col-xs-12">
+                  <div class="col-xs-2">
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/new.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Mai-Chan Newwy</a>
+                  </div>
+                  <div class="col-xs-2">
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/hung.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Tanawit Pananiti</a>
+                  </div>
+               </div>
+               <div class="col-xs-12">
+                  <div class="col-xs-2">  
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/pim.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Lalinda Bufo Something</a>
+                  </div>
+                  <div class="col-xs-2">
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/pac.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Sivabudh Pac Umpudh</a>
+                  </div>
+               </div>
+               <div class="col-xs-12">
+                  <div class="col-xs-2">
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/aum.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Aum Freak</a>
+                  </div>
+                  <div class="col-xs-2">
+                    <div><img style="width:80%; height:auto" class="friend-pic img-circle" src="img/aey.jpg"/></div>
+                  </div>
+                  <div class="col-xs-4 friend-text">
+                    <a>Aey Howatt</a>
+                  </div>
+               </div>
+
+
+                <a href="#" style="padding-top:10px; margin-bottom:0px;">See All Friends</a>
               </div>
 
             </div>
             </div>
-            <div class="tab-pane fade" id="profile">
+            <div class="tab-pane fade" id="photos">
               <div class="panel panel-default">
-              <div class="panel-heading">
-              <h4 class="panel-title font-quark-light">Photos : <span class="label label-default">2756</span></h3>
-              </div>
+              
               <div class="panel-body font-quark-light pic-padding">
-              <img style="width:32%; height:auto"src="img/new.jpg "/>
-              <img style="width:32%; height:auto"src="img/hung.jpg  "/>
-              <img style="width:32%; height:auto"src="img/aum.jpg "/>
+                <h3>Photos</h3>
+                <div class="col-xs-12">
+                  <div class="col-xs-3 no-margin no-padding" style="height=200px;"><img src="img/boston_crop.jpg" class="img-thumbnail"></div>
+                  <div class="col-xs-3 no-margin no-padding" style="height=200px;"><img src="img/city_crop.jpg" class="img-thumbnail"></div>
+                  <div class="col-xs-3 no-margin no-padding" style="height=200px;"><img src="img/mountain_crop.jpg" class="img-thumbnail"></div>
+                  <div class="col-xs-3 no-margin no-padding" style="height=200px;"><img src="img/village_crop.jpg" class="img-thumbnail"></div>
+                </div>
+                <div><a href="#">See All Friends</a></div>
               </div>
+
             </div>
             </div>
-            <div class="tab-pane fade" id="messages">
+            <div class="tab-pane fade" id="contact">
               <div class="panel panel-default">
-              <div class="panel-heading">
-              <h4 class="panel-title font-quark-light">Contact :</h3>
-              </div>
               <div class="panel-body font-quark-light pic-padding">
-              <img style="width:32%; height:auto"src="img/new.jpg "/>
-              <img style="width:32%; height:auto"src="img/hung.jpg  "/>
-              <img style="width:32%; height:auto"src="img/aum.jpg "/>
+                <h3>Contact</h3>
+                <div class="col-xs-12">
+                  <div class="col-xs-1 glyphicon glyphicon-earphone"></div>
+                  <div class="col-xs-3">089-925-xxxx</div>
+                  <div class="col-xs-1 glyphicon glyphicon-envelope"></div>
+                  <div class="col-xs-3">kimorsa@gmail.com</div>
+                  <div class="col-xs-1 glyphicon glyphicon-briefcase"></div>
+                  <div class="col-xs-3">Thinc. Organisation</div>
+                </div>
               </div>
             </div>
             </div>
-            <div class="tab-pane fade" id="settings">
+            <div class="tab-pane fade" id="favourite">
               <div class="panel panel-default">
               <div class="panel-heading">
-              <h4 class="panel-title font-quark-light">Friends : <span class="label label-default">768</span></h3>
+              <h4 class="panel-title font-quark-light">Favourite</h3>
               </div>
               <div class="panel-body font-quark-light pic-padding">
               <img style="width:32%; height:auto"src="img/new.jpg "/>
@@ -463,6 +536,7 @@
 
 
 
+
           <div class="col-xs-12 no-padding panel-group margin-ontop" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -476,7 +550,8 @@
       <div class="panel-body">
         <div class="panel panel-default">
           <div class="panel-body">
-            Panel content
+            <p class="text-post-date">Fri 29 August 2014 22:02</p>
+            <p>This is SPARTA!!!!!</p>
           </div>
           <div class="panel-footer no-padding">
             <ul class="nav nav-pills" role="tablist">
@@ -490,7 +565,38 @@
       <div class="panel-body">
         <div class="panel panel-default">
           <div class="panel-body">
-            Panel content
+            <p class="text-post-date">Thu 28 August 2014 15:04</p>
+            <p>Termimi</p>
+          </div>
+          <div class="panel-footer no-padding">
+            <ul class="nav nav-pills" role="tablist">
+            <li><a href="#like" role="button" data-toggle="tab">Like</a></li>
+            <li><a href="#comment" role="button" data-toggle="tab">Comment</a></li>
+            <li><a href="#share" role="button" data-toggle="tab">Share</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="text-post-date">Mon 25 August 2014 08:05</p>
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="panel-footer no-padding">
+            <ul class="nav nav-pills" role="tablist">
+            <li><a href="#like" role="button" data-toggle="tab">Like</a></li>
+            <li><a href="#comment" role="button" data-toggle="tab">Comment</a></li>
+            <li><a href="#share" role="button" data-toggle="tab">Share</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+            <div class="panel-body">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="text-post-date">Mon 25 August 2014 20:15</p>
+            <p>This is SPARTA!!!!!</p>
           </div>
           <div class="panel-footer no-padding">
             <ul class="nav nav-pills" role="tablist">
@@ -513,8 +619,19 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="text-post-date">Fri 29 August 2014 22:02</p>
+            <p>This is SPARTA!!!!!</p>
+          </div>
+          <div class="panel-footer no-padding">
+            <ul class="nav nav-pills" role="tablist">
+            <li><a href="#like" role="button" data-toggle="tab">Like</a></li>
+            <li><a href="#comment" role="button" data-toggle="tab">Comment</a></li>
+            <li><a href="#share" role="button" data-toggle="tab">Share</a></li>
+          </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -528,9 +645,19 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="text-post-date">Fri 29 August 2014 22:02</p>
+            <p>This is SPARTA!!!!!</p>
+          </div>
+          <div class="panel-footer no-padding">
+            <ul class="nav nav-pills" role="tablist">
+            <li><a href="#like" role="button" data-toggle="tab">Like</a></li>
+            <li><a href="#comment" role="button" data-toggle="tab">Comment</a></li>
+            <li><a href="#share" role="button" data-toggle="tab">Share</a></li>
+          </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -543,16 +670,11 @@
 
       <!-- Here comes the footer -->
 
-    <div class="col-lg-12 show-grid footer-box">
-      <div class="col=lg-8">
-
+    <div class="col-xs-12 show-grid footer-box">
+      <div class="col-xs-2 col-xs-offset-2"><img src="img/logo.png" style="width:100px; height:auto;"></div>
+      <div class="col-xs-3 col-xs-offset-4">
+        <p class="font-montserrat white-text" style="padding-top:6px;">Copyright © Icezucker 2014</p>
       </div>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
   </body>
 </html>
